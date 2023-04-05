@@ -1,0 +1,29 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Wallet_detail</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to wallet_details_path, class: button_class(theme: "transparent") do %>
+      All Wallet_details
+      <% end %>
+      <%= link_to edit_wallet_detail_path(@wallet_detail), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Wallet:</p>
+        <p><%= @wallet_detail.wallet_id %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Number:</p>
+        <p><%= @wallet_detail.number %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Balance:</p>
+        <p><%= @wallet_detail.balance %></p>
+      </li>
+  </ul>
+</div>

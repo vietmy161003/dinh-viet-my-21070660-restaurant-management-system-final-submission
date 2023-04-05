@@ -1,0 +1,53 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Customer_information</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to customer_informations_path, class: button_class(theme: "transparent") do %>
+      All Customer_informations
+      <% end %>
+      <%= link_to edit_customer_information_path(@customer_information), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Role:</p>
+        <p><%= @customer_information.role %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @customer_information.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Username:</p>
+        <p><%= @customer_information.username %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Password:</p>
+        <p><%= @customer_information.password %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Email:</p>
+        <p><%= @customer_information.email %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Address:</p>
+        <p><%= @customer_information.address %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Contact:</p>
+        <p><%= @customer_information.contact %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Verified:</p>
+        <p><%= @customer_information.verified %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Deleted:</p>
+        <p><%= @customer_information.deleted %></p>
+      </li>
+  </ul>
+</div>

@@ -1,0 +1,34 @@
+<%= form_with(model: wallet_detail) do |form| %>
+<% if wallet_detail.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(wallet_detail.errors.count, "error") %> prohibited this wallet_detail from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% wallet_detail.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :wallet_id, class: label_class %>
+          <%= form.number_field :wallet_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :number, class: label_class %>
+          <%= form.text_field :number, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :balance, class: label_class %>
+          <%= form.number_field :balance, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if wallet_detail.persisted? %>
+<%= link_to "Cancel", wallet_detail, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", wallet_details_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

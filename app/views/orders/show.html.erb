@@ -1,0 +1,49 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Order</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to orders_path, class: button_class(theme: "transparent") do %>
+      All Orders
+      <% end %>
+      <%= link_to edit_order_path(@order), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Customer:</p>
+        <p><%= @order.customer_id %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Address:</p>
+        <p><%= @order.address %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Description:</p>
+        <p><%= @order.description %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Date:</p>
+        <p><%= @order.date %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Payment type:</p>
+        <p><%= @order.payment_type %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Total:</p>
+        <p><%= @order.total %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Status:</p>
+        <p><%= @order.status %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Deleted:</p>
+        <p><%= @order.deleted %></p>
+      </li>
+  </ul>
+</div>
