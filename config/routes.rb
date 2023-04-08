@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :homes
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :wallet_details
   resources :wallets
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  root to: 'items#index'
+  root to: 'homes#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

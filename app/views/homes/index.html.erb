@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+box-sizing: border-box;
+}
+ 
+/* Style the body */
+body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+}
+ 
+/* Header/logo Title */
+.header {
+padding: 80px;
+text-align: center;
+background: #1f456e;
+color: white;
+}
+ 
+/* Increase the font size of the heading */
+.header h1 {
+font-size: 40px;
+}
+ 
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+overflow: hidden;
+background-color: #151e3d;
+position: sticky;
+position: -webkit-sticky;
+top: 0;
+}
+ 
+/* Style the navigation bar links */
+.navbar a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+}
+ 
+/* Right-aligned link */
+.navbar a.right {
+float: right;
+}
+ 
+/* Change color on hover */
+.navbar a:hover {
+background-color: white;
+color: black;
+}
+ 
+/* Active/current link */
+.navbar a.active {
+background-color: #59788e;
+color: white;
+}
+ 
+/* Column container */
+.row {
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
+}
+ 
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+-ms-flex: 30%; /* IE10 */
+flex: 30%;
+background-color: white; 
+padding: 20px;
+}
+ 
+/* Main column */
+.main {
+-ms-flex: 70%; /* IE10 */
+flex: 70%;
+background-color: white;
+padding: 20px;
+}
+ 
+/* Fake image, just for this example */
+.fakeimg {
+background-color: #757c88;
+width: 100%;
+padding: 20px;
+}
+ 
+/* Footer */
+.footer {
+padding: 20px;
+text-align: center;
+background: white;
+}
+ 
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+.row {
+flex-direction: column;
+}
+}
+ 
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+.navbar a {
+float: none;
+width: 100%;
+}
+}
+</style>
+</head>
+<body>
+ 
+<div class="header">
+<h1>Welcome to Glorious Restaurant!</h1>
+<p><b>Delivering Wow, Sharing Happiness</b></p>
+</div>
+ 
+<div class="navbar">
+<a href="#" class="active">Home</a>
+<a href="#">Link</a>
+<a href="#">Link</a>
+<a href="#" class="right">Link</a>
+</div>
+ 
+<div class="row">
+<div class="side">
+<h2>01/ OUR STORY</h2>
+<p>“Hey, why don’t we build a pizza oven in the backyard?” The founder’s girlfriend said to him one day, and in an attempt to make her wish come true,
+he gathered his friends at his home in Tokyo and decided to build a pizza oven. This was the very beginning of Pizza 4P's</p>
+<h3>More picture</h3>
+<div class="fakeimg" style="height:60px;">Image</div><br>
+<div class="fakeimg" style="height:60px;">Image</div><br>
+<div class="fakeimg" style="height:60px;">Image</div>
+</div>
+<div class="main">
+<h2>02/ ABOUT GLORIOUS RESTAURANT</h2>
+<h5>Was established on April 16th 2023</h5>
+<div class="fakeimg" style="height:200px;">Image</div>
+<p>With our mission of "Delivering Wow, Sharing Happiness," we have been striving every day to provide the best dining experience to all of our dear guests. A restaurant should not be a place to simply have a meal. We truly want every guest to leave happy with our food, service, and environment that delivers the "Wow" factor. We continue to evolve and improve every day so that we can always fulfill our mission of "Delivering Wow, Sharing Happiness" to every guest.</p>
+<br>
+<h2>03/ ABOUT DESIGN</h2>
+<p>Hoping to be Your "Special Oasis",
+Away from the Ordinary, yet Also Comfortable</p>
+<div class="fakeimg" style="height:200px;">Image</div>
+<p>What kind of place makes people want to come back again and again?
+
+Is it something different from your day-to-day life,
+that makes your heart dance?
+Is it a comfortable place where you can take a breath and relax?
+Glorious Restaurant strives to be both of those things
+- a place where you can feel the excitement of being away from the ordinary,
+yet feel comfortable at the same time.
+
+This is why we put a lot of time and effort into designing our space
+– why our commitment goes beyond our food.
+
+We strive to always be new with designs that amaze,
+but also to be a relaxing place that makes you want to stay for hours.
+Glorious Restaurant hopes to ultimately be your “Special Oasis”.</p>
+</div>
+ 
+<div class="footer">
+<h2>Footer</h2>
+</div>
+ 
+</body>
+</html>
+
+
+
