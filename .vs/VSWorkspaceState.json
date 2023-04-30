@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app",
+    "\\app\\views"
   ],
-  "SelectedNode": "\\Gemfile",
+  "SelectedNode": "\\app\\views\\order_details",
   "PreviewInSolutionExplorer": false
 }
