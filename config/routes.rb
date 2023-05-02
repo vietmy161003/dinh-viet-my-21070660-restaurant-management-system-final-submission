@@ -1,12 +1,12 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :coupons
   resources :homes
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :wallet_details
   resources :wallets
   resources :customer_informations
-  resources :tickets
   resources :order_details
   resources :orders
   resources :items
