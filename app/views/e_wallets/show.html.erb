@@ -1,0 +1,29 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">E_wallet</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to e_wallets_path, class: button_class(theme: "transparent") do %>
+      All E_wallets
+      <% end %>
+      <%= link_to edit_e_wallet_path(@e_wallet), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Customer:</p>
+        <p><%= @e_wallet.customer %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Customer name:</p>
+        <p><%= @e_wallet.customer_name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Balance:</p>
+        <p><%= @e_wallet.balance %></p>
+      </li>
+  </ul>
+</div>

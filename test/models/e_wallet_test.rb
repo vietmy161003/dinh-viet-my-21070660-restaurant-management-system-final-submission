@@ -1,6 +1,6 @@
 require "test_helper"
 
-class WalletDetailTest < ActiveSupport::TestCase
+class EWalletTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
